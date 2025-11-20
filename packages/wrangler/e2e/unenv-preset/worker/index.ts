@@ -628,10 +628,12 @@ export const WorkerdTests: Record<string, () => void> = {
 
 		const domain = new Domain();
 
-		assertTypeOf(domain, "add", "function");
-		assertTypeOf(domain, "enter", "function");
-		assertTypeOf(domain, "exit", "function");
-		assertTypeOf(domain, "remove", "function");
+		assertTypeOfProperties(domain, {
+			add: "function",
+			enter: "function",
+			exit: "function",
+			remove: "function",
+		});
 	},
 
 	async testWasi() {
